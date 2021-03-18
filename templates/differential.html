@@ -1,0 +1,178 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Differential</title>
+    <link rel="stylesheet" href="../static/index/5_speed_transmission.css">
+    <link rel="stylesheet" href="../static/index/bootstrap.min.css">
+    <script src="../static/index/js/jquery-2.1.3.min.js"></script>
+    <script src="../static/index/js/bootstrap.min.js"></script>
+</head>
+<body class="body">
+    
+    <div class="container">
+        <div class="col-md-6 col-md-offset-11">
+            <img src="../static/images/mercedes-benz-logo-png-transparent-mercedes-benz-logo2-vector-11563000960vssrfbiuqu.png"  alt="..." class="img-circle">
+            <p></p>
+          </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-md-offset-4 ">
+                <div class="page-header">
+                    <h1>Differential <small> Calculation</small></h1>
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-8">
+              <a href="#" class="thumbnail">
+                <img src="../static/images/Differential.jpeg">
+              </a>
+            </div>
+
+
+        </div>
+
+    
+    <br><br>
+
+<form action="/differential" method="POST">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h2 class="header">Calculation of Output Torque & rev</h2>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-3">
+            <input type="text" class="form-control" name="Input Torque" placeholder="Insert inpur Torque">
+        </div>
+        <div class="col-md-3">
+            <input type="text" class="form-control" name="torque gear ratio" placeholder=" Gear Ratio">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-5">
+            <button type="submit" class="btn btn-warning" id="calculate" style="color: black;">Calculate</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <p>Output rev of Differential is   {{output_rev}}</p>
+            <p>Output torque of Differential is   {{output_torque}}</p>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h2 class="header">Gear ratio Calculation of Differential (Number of teeth)</h2>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="input gear" placeholder="Number of teeth in pinion Gear">
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="output gear" placeholder="Number of teeth in Ring Gear">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-5">
+            <button type="submit" class="btn btn-warning" id="calculate" style="color: black;">Calculate</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            Gear Ratio is {{gear1}}
+        </div>
+    </div>
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h2 class="header">Gear ratio Calculation of Differential (input & output rev)</h2>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="input rev for ratio" placeholder="input rev of Differential">
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="ouput rev for ratio" placeholder="Output rev of Differential">
+        </div>
+    </div>
+<br>
+<div class="row">
+    <div class="col-md-6">
+        Gear Ratio is {{gear2}}
+    </div>
+</div>
+<br><br>    
+
+
+<br>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-5">
+        <button type="submit" class="btn btn-warning" id="calculate" style="color: black;">Calculate</button>
+    </div>
+</div>
+
+
+
+</form>
+
+<div class="container" >
+    <div class="row" >
+        <div name="result1">
+           Gear Ratio is {{result1}}
+            
+        </div>
+    </div>
+<br><br>
+
+    
+</div>
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h2 class="header">Gear ratio Calculation of Differential (Gear Diameter)</h2>
+        </div>
+    </div>
+</div><br>
+<div class="row">
+    <div class="col-md-6">
+        <input type="text" class="form-control" name="pin" placeholder="pinion gear diameter">
+    </div>
+    <div class="col-md-6">
+        <input type="text" class="form-control" name="Ring" placeholder="Ring gear diameter">
+    </div>
+</div><br><br>
+<div class="row">
+    <div class="col-md-6 col-md-offset-5">
+        <button type="submit" class="btn btn-warning" id="calculate" style="color: black;">Calculate</button>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-sm-6">
+            Gear ratio is {{gear3}}
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

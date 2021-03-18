@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Differential</title>
+    <link rel="stylesheet" href="../static/index/Gear_ratio_Calculation_of_Differential_Gear_Diameter.css">
+    <link rel="stylesheet" href="../static/index/bootstrap.min.css">
+    <script src="../static/index/js/jquery-2.1.3.min.js"></script>
+    <script src="../static/index/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-md-offset-3 ">
+                <div class="page-header">
+                    <h1>Output Torque Calculation of <small> Differential </small></h1>
+                  </div>
+            </div>
+        </div>
+        <form action="/Calculation_of_Output_torque" method="POST">
+        <div class="row">
+            <div class="col-md-6 col-sm-8">
+              <a href="#" class="thumbnail">
+                <img src="../static/images/Differential.jpeg">
+              </a>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="usr"> Input Torque</label>
+                    <input type="text" class="form-control" name="input torque">
+                  </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="usr">Gear Ratio</label>
+                    <input type="text" class="form-control" name="gear ratio">
+                  </div>
+            </div>
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-primary">Calculate</button>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Output Torque of Differential is: {{output_torque}} N.m</h2>
+                </div>
+            </div>
+        </div>
+    </form>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>

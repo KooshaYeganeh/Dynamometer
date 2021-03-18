@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center od gravity</title>
+    <link rel="stylesheet" href="../static/index/center_of_gravity.css">
+    <link rel="stylesheet" href="../static/index/bootstrap.min.css">
+    <script src="../static/index/js/jquery-2.1.3.min.js"></script>
+    <script src="../static/index/js/bootstrap.min.js"></script>
+    <script src="../static/index/js/center_of_gravity.js"></script>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-11">
+          <img src="../static/images/Logo-Mercedesbenz.png"  alt="..." class="img-circle">
+          <p></p>
+        </div>
+      </div>
+
+    <div class="row">
+        <div class="page-header text-center" id="header">
+          <h1>Center of Gravity</h1>
+        </div>
+      </div>
+      <br><br><br>
+
+<form action="/center_of_gravity" method="POST">
+
+      <div class="container">
+        <div class="row" id="wheelbase">
+            <div class="col-md-6">
+                <label for="usr">wheelbase (m)</label>
+                <input type="text" name="wheelbase" class="form-control"    style="background-color:#8FBC8F; ">
+              </div>
+        
+              <div class="col-md-6" id="frontmass" >
+                <label for="pwd">FrontMass (kg)</label>
+                <input type="text" name="frontmass" class="form-control"  style="background-color:#8FBC8F;" >
+              </div> 
+
+              <div class="col-md-6" id="rearmass">
+                <label for="pwd">RearMass (kg)</label>
+                <input type="text" name="rearmass" class="form-control"   style="background-color:#8FBC8F;" >
+              </div> 
+
+              <div class= "col-md-6 " id="gravity">
+                <label for="pwd">Gravity</label>
+                <input type="text" name="gravity" class="form-control"  placeholder=" Gravity " style="background-color:#8FBC8F;"  >
+              </div> 
+        </div>
+      </div>
+<br><br>
+      <div class="row" id="center" name = "center" >
+        <div class="col-md-6">
+            Center of Gravity is:{{cgravity}} in Front of Rear Axle
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        Center of Gravity is:{{bgravity}} Behind of Front Axle
+      </div>
+    </div>
+
+      <div class="row">
+        <div class="col-md-6 col-md-offset-5">
+          <button type="submit" class="btn btn-warning btn-lg" id="button">Calculate</button>
+      </div>
+    </div>
+        
+  </form>
+    
+</body>
+
+
+
+</html>
+
+
+
+

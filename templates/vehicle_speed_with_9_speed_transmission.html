@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9_speed_transmission</title>
+    <link rel="stylesheet" href="../static/index/5_speed_transmission.css">
+    <link rel="stylesheet" href="../static/index/bootstrap.min.css">
+    <script src="../static/index/js/jquery-2.1.3.min.js"></script>
+    <script src="../static/index/js/bootstrap.min.js"></script>
+</head>
+<body class="body">
+    
+    <div class="container">
+        <div class="col-md-6 col-md-offset-11">
+            <img src="../static/images/mercedes-benz-logo-png-transparent-mercedes-benz-logo2-vector-11563000960vssrfbiuqu.png"  alt="..." class="img-circle">
+            <p></p>
+          </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-md-offset-4 ">
+                <div class="page-header">
+                    <h1>Vehicle Speed of 9 speed <small>Transmission Car</small></h1>
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-sm-8">
+              <a href="#" class="thumbnail">
+                <img src="../static/images/2013_mercedes-benz_sls_amg_black_series_4_1600x1200.jpg"><h2 style="color: red;">You Should Insert Two Differenrt Rev of Engine else App can't done Calculations </h2>
+              </a>
+            </div>
+
+
+
+
+            <form action="/vehicle_speed_with_5_speed_transmission" method="POST">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" name="first rev" placeholder="Insert First rev Selected of your engine " style="color: black; font-size: 18px;">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" name="second rev" placeholder="Insert Last rev Selected of your engine" style="color: black; font-size: 18px;">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" name="one gear" placeholder="First Gear Ratio" style="color: black; font-size: 18px;">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" name="two gear" placeholder="Second Gear Ratio" style="color: black; font-size: 18px;">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" name="three gear" placeholder="Third Gear Ratio" style="color: black; font-size: 18px;">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" name="four gear" placeholder="Forth Gear Ratio" style="color: black; font-size: 18px;">
+                    </div>
+                </div>
+            <br>
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <input type="text" class="form-control" name="five gear" placeholder="Fifth Gear Ratio" style="color: black; font-size: 18px;">
+                    </div>
+                    <div class="col-md-6 ">
+                        <input type="text" class="form-control" name="six gear" placeholder="six Gear Ratio" style="color: black; font-size: 18px;">
+                    </div>
+                    </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <input type="text" class="form-control" name="seven gear" placeholder="Seven Gear Ratio" style="color: black; font-size: 18px;">
+                    </div>
+                    <div class="col-md-6 ">
+                        <input type="text" class="form-control" name="eight gear" placeholder="Eight Gear Ratio" style="color: black; font-size: 18px;">
+                    </div>
+<br><br><br>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <input type="text" class="form-control" name="nine gear" placeholder="nine Gear Ratio" style="color: black; font-size: 18px;">
+                    </div>
+                        <div class="col-md-6 ">
+                            <input type="text" class="form-control" name="Differential ratio" placeholder="Differentila Ratio (Kranvil)" style="color: black; font-size: 18px;">
+                        </div>
+                </div>
+
+                <br>
+
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <input type="text" class="form-control" name="Radius" placeholder="Tyre Radius(m)" style="color: black; font-size: 18px;">
+                    </div>
+
+                </div>
+                
+
+            <br>
+            
+            <div class="row">
+                <div class="col-md-6 col-md-offset-5">
+                    <button type="submit" class="btn btn-warning" id="calculate" style="color: black;">Calculate</button>
+                </div>
+            </div>
+
+        </form>
+
+
+
+            <div class="container" >
+                <div class="row" >
+                    <div name="result1" style="font-size: 20px;">
+                        <ul>Speed is Respectively for Each Gear :
+                           {% for number in speed %}
+                        <li>
+                            {{number}} km/h
+                        </li>           
+                        {% endfor %}
+                    </ul>
+                    </div>
+                </div>

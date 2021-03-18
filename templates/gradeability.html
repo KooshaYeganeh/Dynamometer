@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradeability</title>
+    <link rel="stylesheet" href="../static/index/gradeability.css">
+    <link rel="stylesheet" href="../static/index/bootstrap.min.css">
+    <script src="../static/index/js/jquery-2.1.3.min.js"></script>
+    <script src="../static/index/js/bootstrap.min.js"></script>
+    <script src="../static/index/js/gradeability.js"></script>
+</head>
+<body>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-11">
+        <img src="../static/images/Logo-Mercedesbenz.png"  alt="..." class="img-circle">
+        <p></p>
+      </div>
+    </div>
+
+  <div class="row">
+      <div class="page-header text-center" id="header">
+        <h1>Gradeability</h1>
+      </div>
+    </div>
+    <br><br><br>
+
+
+<form action="/gradeability" method="POST">
+    <div class="container">
+      <div class="row" id="wheelbase">
+          <div class="col-md-6">
+              <label for="usr">First Gear Tractive Force (N)</label>
+              <input type="text" name="first" class="form-control"    style="background-color:#DCDCDC;">
+            </div>
+
+
+            <div class= "col-md-6" id="totalmass">
+              <label for="pwd">Seccond Gear Tractive Force (N)</label>
+              <input type="text" name="seccond" class="form-control"   style="background-color:#DCDCDC;" >
+            </div> 
+      
+            <div class="col-md-6" id="frontmass" >
+              <label for="pwd">Third Gear Tractive Force (N)</label>
+              <input type="text" name="third" class="form-control"  style="background-color:#DCDCDC;" >
+            </div> 
+
+            <div class="col-md-6" id="rearmass">
+              <label for="pwd">Rolling Resistance Coefficient (μ)</label>
+              <input type="text" name="resistance" class="form-control"   style="background-color:#DCDCDC;" >
+            </div> 
+
+            <div class= "col-md-6 col-md-offset-3" id="gravity">
+              <label for="pwd">Mass (m)</label>
+              <input type="text" name="mass" class="form-control"  style="background-color:#DCDCDC;"  >
+            </div> 
+
+
+              
+            <div class="row">
+              <div class="col-md-6 col-md-offset-5">
+                <button type="submit" name="calculate" class="btn btn-warning btn-lg" id="button">Calculate</button>
+              </div>
+            </div>
+      </div>
+    </div>
+    </form><br><br>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+      <table class="table-condensed  table-bordered">
+        <thead>
+          <tr>
+            <th scope="col" class="success">Raod surface</th>
+            <th scope="col" class="warning">Rolling Resistance Coefficient (μ)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="active" >
+            <td>Smooth tarmac road</td>
+            <td>0.010</td>
+          </tr>
+          <tr class="success" >
+            <td>Rough,good concrete surface</td>
+            <td>0.014</td>
+
+          </tr>
+          <tr class="warning">
+            <td>Bad,Worn road surface</td>
+            <td>0.035</td>
+
+          </tr>
+          <tr class="danger">
+            <td>Very good earth tracks</td>
+            <td>0.045</td>
+
+          </tr>
+          <tr class="info">
+            <td>Bad earth tracks</td>
+            <td>0.160</td>
+
+          </tr>
+          <tr class="active">
+            <td>Loose sand</td>
+            <td>0.0150-0.0300</td>
+
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <ul style="font-size: 30px;">
+            {% for num in mylist %}
+          <li>
+            <span>for each gear result is:</span>{{num}}<span>%</span>
+          </li>
+            {% endfor %}
+          </ul>
+
+      
+        </div>
+      </div>
+
+    
+      </div>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
+
+
+
+

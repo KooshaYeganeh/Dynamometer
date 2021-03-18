@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5_speed_transmission</title>
+    <link rel="stylesheet" href="../static/index/5_speed_transmission.css">
+    <link rel="stylesheet" href="../static/index/bootstrap.min.css">
+    <script src="../static/index/js/jquery-2.1.3.min.js"></script>
+    <script src="../static/index/js/bootstrap.min.js"></script>
+</head>
+<body class="body">
+    
+    <div class="container">
+        <div class="col-md-6 col-md-offset-11">
+            <img src="../static/images/mercedes-benz-logo-png-transparent-mercedes-benz-logo2-vector-11563000960vssrfbiuqu.png"  alt="..." class="img-circle">
+            <p></p>
+          </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-md-offset-4 ">
+                <div class="page-header">
+                    <h1>Output rev of 5 speed <small>Transmission</small></h1>
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-sm-8">
+              <a href="#" class="thumbnail">
+                <img src="../static/images/5_G_tronic_722_6_01.jpg">
+              </a>
+            </div>
+ 
+    
+
+            <div class="col-md-4 col-sm-4 ">
+               <p style="color: black; margin-top:20px">To Calculate Output rev of Transmission you Need to Input Bounds of Revs ...</p>
+               <p style="color: black; margin-top:20px">You Can See Dyno Graph of Car and Control Range of input ond output </p><br>
+               <div class="col-md-12 col-sm-4">
+                <img src="../static/images/dyno.png" class="img-thumbnail">
+              </div>
+            </div>
+
+        </div>
+
+    
+    <br><br>
+
+<form action="/5_speed_transmission" method="POST">
+    <div class="row">
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="first rev" placeholder="Insert inpur rev" style="color: black; font-size: 18px;">
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="second rev" placeholder="Insert output rev" style="color: black; font-size: 18px;">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="first gear" placeholder="First Gear Ratio" style="color: black; font-size: 18px;">
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="second gear" placeholder="Second Gear Ratio" style="color: black; font-size: 18px;">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="third gear" placeholder="Third Gear Ratio" style="color: black; font-size: 18px;">
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="forth gear" placeholder="Forth Gear Ratio" style="color: black; font-size: 18px;">
+        </div>
+    </div>
+<br>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <input type="text" class="form-control" name="fifth gear" placeholder="Fifth Gear Ratio" style="color: black; font-size: 18px;">
+        </div>
+    </div>
+
+<br>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-5">
+        <button type="submit" class="btn btn-warning" id="calculate" style="color: black;">Calculate</button>
+    </div>
+</div>
+
+
+
+</form>
+
+<div class="container" >
+    <div class="row" >
+        <div name="result1" style="font-size: 20px;">
+            <ul>
+                {% for number in result1 %}
+            <li>
+                {{number}} 
+            </li>           
+            {% endfor %}
+        </ul>
+        </div>
+    </div>
+    
+</div>
+</body>
+</html>

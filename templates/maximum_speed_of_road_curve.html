@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximum Speed of Road Curve</title>
+    <link rel="stylesheet" href="../static/index/maximum_speed_of_road_curve.css">
+    <link rel="stylesheet" href="../static/index/bootstrap.min.css">
+    <script src="../static/index/js/jquery-2.1.3.min.js"></script>
+    <script src="../static/index/js/bootstrap.min.js"></script>
+    
+</head>
+<body style="background-image: url(../static/images/thumb2-drift-4k-mercedes-amg-gt-2017-cars-road.jpg); background-repeat: no-repeat; background-position: center; background-size: cover;">
+
+  <div class="container">
+    <div class="row" style="color:white">
+      <div class="col-md-6 col-sm-6 col-md-offset-4 ">
+          <div class="page-header">
+              <h1>Maximun Speed of <small style="color:seashell;">Road Curve</small></h1>
+            </div>
+      </div>
+  </div>
+
+    </div>
+   
+   <form action="/maximum_speed_of_road_curve" method="POST">
+
+    <div class="container">
+
+
+    <div class="form-group row" id="form1">
+        <div class="col-lg-6 col-lg-6 col-md-6 col-sm-8 col-xs-8">
+          <label for="ex3" style="color: white; font-size:20px"> Radius</label>
+          <input class="form-control" name="radius"  type="text" placeholder="radius (m)">
+        </div>
+
+
+        <div class="col-lg-6 col-md-6 col-sm-8 col-xs-8">
+            <label for="ex3" style="color: white; font-size:20px"> g</label>
+            <input class="form-control"  name="gravity" type="text" placeholder="gravitational acceleration">
+          </div>
+      </div> 
+
+
+      <div class="form-group row" id="form2">
+        <div class="col-lg-6 col-md-6 col-sm-8 col-xs-8" >
+          <label for="ex3" style="color: white; font-size:20px"> µ</label>
+          <input class="form-control" name="coefficient"  type="text" placeholder="coefficient of Friction">
+        </div>
+
+
+        <div class="col-lg-6 col-md-6 col-sm-8 col-xs-8">
+            <label for="ex3" style="color: white; font-size:20px">angle</label>
+            <input class="form-control" name="angle" id="angle" type="text" placeholder="angle (degree)">
+          </div>
+          
+      </div>
+     
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-5">
+            <button type="submit" class="btn btn-danger btn-lg" >calculate</button>
+        </div>
+        </div>
+      </div>
+
+
+    </div>
+      </div> 
+<br><br>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div style="color: white; font-size:30px;">
+              Maximum speed in Road curve is:{{speed}} km/h
+                    </div>
+          </div>
+        </div>
+      </div>
+
+      
+<br><br>
+      <div class="table-responsive" style="width: 450px;">
+        <table class="table">
+            <tr> some effective numbers
+                <th>coefficient of friction μ</th>
+                <th>Angle a</th>
+                
+              </tr>
+              <tr class="success">
+                <td>0.35</td>
+                <td>30</td>
+               
+              </tr>
+              <tr  class="danger">
+                <td>0.20</td>
+                <td>20</td>
+                
+              </tr>
+        </table>
+      </div>
+
+
+      </div>
+    </form>
+  </div>
+</body>
+</html>

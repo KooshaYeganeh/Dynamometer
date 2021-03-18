@@ -1,0 +1,36 @@
+
+body{
+    background-image: url("../images/814869.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: buttom; */
+    
+}
+
+
+
+
+
+.row{
+    color: white;
+    font-size: 16px;
+}
+
+
+#button{
+    margin-top: 10%;
+}
+
+#button:hover{
+    background-color:red;
+
+}
+
+#border{
+    border: 1px solid black;
+    margin: 5%;
+    margin-right: 50%;
+    box-shadow: 8px 8px 8px 8px black;
+    font-size: 25px;
+    color: black;
+  }

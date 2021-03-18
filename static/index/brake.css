@@ -1,0 +1,24 @@
+body{
+    background-image: url("../images/mercedes_sls_amg_black_vs_porsche_911_gt3-wide.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-clip: content-box;
+
+}
+
+#button1:hover{
+    background-color: red;    
+}
+
+#button2:hover{
+    background-color: red;    
+}
+
+#button3:hover{
+    background-color: red;    
+}
+
+#button4:hover{
+    background-color: red;    
+}

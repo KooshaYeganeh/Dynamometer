@@ -1,0 +1,31 @@
+body{
+    background-image:url(../images/mercedes_amg_gt_r_2-HD.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin:15%;
+}   
+
+#button{
+  margin-top: 10%;
+}
+
+.row{
+  color: white;
+}
+
+
+#Coefficient{
+  margin-top: 5%;
+}
+
+
+#frontal_area{
+  font-size: 25px;
+}
+
+
+#Drag{
+  font-size: 25px;
+}
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clutch</title>
+  <link rel="stylesheet" href="../static/index/clutch.css">
+  <link rel="stylesheet" href="../static/index/bootstrap.min.css">
+  <script src="../static/index/js/jquery-2.1.3.min.js"></script>
+  <script src="../static/index/js/bootstrap.min.js"></script>
+  <script src="../static/index/js/clutch.js"></script>
+</head>
+<body>
+
+
+
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <img src="../static/images/Logo-Mercedesbenz.png"  alt="..." class="img-circle">
+      <p></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="page-header text-center" id="header">
+      <h1>Clutch Torque</h1>
+    </div>
+  </div>
+  <br><br><br>
+
+<form action="/clutch" method="POST">
+  <div class="container">
+    <div class="row" id="inner">
+        <div class="col-md-6">
+            <label for="usr">InnerFriction (m)</label>
+            <input type="text" name="innerfriction" class="form-control" style="background-color:#8FBC8F;">
+          </div>
+
+
+          <div class= "col-md-6" id="outer">
+            <label for="pwd">OuterFriction(m)</label>
+            <input type="text" name="outerfriction" class="form-control"   style="background-color:#8FBC8F;" >
+          </div> 
+    
+          <div class="col-md-6" id="number" >
+            <label for="pwd">Number of Friction Surface (clutch)</label>
+            <input type="text" name="number" class="form-control"  style="background-color:#8FBC8F;" >
+          </div> 
+
+          <div class="col-md-6" id="presssure">
+            <label for="pwd">Pressure Force(N) </label>
+            <input type="text" name="pressure" class="form-control"   style="background-color:#8FBC8F;" >
+          </div> 
+
+          <div class="col-md-6 col-md-offset-3" id="coefficient">
+            <label for="pwd">Friction Coefficient </label>
+            <input type="text" name="coefficient" class="form-control"   style="background-color:#8FBC8F;" >
+          </div> 
+
+
+
+        </div>
+  </div>
+
+    <br>
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <button type="submit" class="btn btn-warning btn-lg" id="button">Calculate</button>
+          </div>
+        </div>
+
+      </form>
+
+
+
+<div id="result1" name = "result1">
+<p >
+   Average Clutch friction is: {{ clutch1 }}
+</p>
+<p id="result2" name = "result2" style="padding-right: 0%;">
+  clutch Torque is : {{ clutch2 }} (Nm)
+</p>
+  </div>
+</body>
+</html>

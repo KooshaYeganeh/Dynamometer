@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/index/rollover_speed.css">
+    <link rel="stylesheet" href="../static/index/bootstrap.min.css">
+    <script src="../static/index/js/jquery-2.1.3.min.js"></script>
+    <script src="../static/index/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: #A9A9A9;">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-11">
+          <img src="../static/images/Logo-Mercedesbenz.png"  alt="..." class="img-circle">
+          <p></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-sm-8">
+          <a href="#" class="thumbnail">
+            <img src="../static/images/image16x9.img.1536.high.jpg">
+          </a>
+        </div>
+
+    <div class="row">
+        <div class="page-header text-center" id="header">
+          <h1 style="color: white; font-size: 50px;">Rollover Speed</h1>
+        </div>
+      </div>
+      <br><br><br>
+
+      <form action="/rollover_speed" method="POST">
+        <div class="container">
+            <h2 style="color: white; "><img src="../static/images/15237035471557740360.svg" alt=""> With Transverse slope of the road =></h2>
+             <div class="row">
+                 <div class="col-md-6 col-md-offset-3">
+                    <label for="usr" style="color: white; font-size:20px;">ًRoad Radius (m)</label>
+                    <input type="text" name="road radius" class="form-control"    style="background-color:grey; color:black">
+                 </div>
+             </div>
+
+
+             <div class="row">
+                <div class="col-md-6">
+                   <label for="usr"  style="color: white; font-size:20px;">ًCenter of Gravity Height (m)</label>
+                   <input type="text" name="center gravity" class="form-control"    style="background-color:grey; color:black">
+                </div>
+                <div class="col-md-6">
+                   <label for="usr"  style="color: white; font-size:20px;">Track (m)</label>
+                   <input type="text" name="track" class="form-control"    style="background-color:grey; color:black">
+                </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <label for="usr"  style="color: white; font-size:20px;"> angle</label>
+                <input type="text" name="angle" class="form-control"    style="background-color:grey; color:black">
+              </div>
+              <div class="col-md-6">
+                <label for="usr"  style="color: white; font-size:20px;">Lateral Sliding</label>
+                <input type="text" name="lateral sliding" class="form-control"    style="background-color:grey; color:black">
+              </div>
+            </div>
+<br><br>
+            <div class="row">
+              <div class="col-md-6 col-md-offset-5">
+                
+                <button type="submit" class="btn-lg btn-primary">Calculate</button>
+                
+              </div>
+            </div>
+          </form>
+<br><br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 ">
+      <p style="color: #000000; font-size:20px"> Calculation Result for  with Transverse slope of the road is = {{one1}} km/h </p>
+    </div>
+  </div>
+</div>
+
+
+      
+<br><br><br>
+<div class="container">
+<div class="row">
+  <div class="col-md-6">
+    <img src="../static/images/14661163991557740330.svg" alt=""><p style="color: white; font-size:18">Car Rolling Over when Weight Transfer Force to interior Tyre is approximately Zero(0).at this time car is going to br roll over</p>
+    <img src="../static/images/14661163991557740330.svg" alt=""><p style="color: white; font-size:18">at the road ,when tyre and road friction is going to decreased, lateral force to prevail it and car is going to Slide.<br>but when friction between tyre and road Surface is good , at this time when car is going to road curve faster,Car can be Crash</p>
+    <img src="../static/images/14661163991557740330.svg" alt=""><p style="color: white; font-size:18px">if Lateral sliding is zero lateral acceleration is approximately zero</p>
+  </div>
+</div>
+</div>
+
+
+</body>
+</html>

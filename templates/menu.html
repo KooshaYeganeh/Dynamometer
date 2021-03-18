@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Menu</title>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../static/index/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/index/font-awesome.css">
+
+    <script src="../static/index/js/jquery-2.1.3.min.js" type="text/javascript"></script>
+
+        <script src="../static/index/js/jquery.knob.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function() {
+            $(".knob").knob();
+        });
+    </script>
+
+
+    <link rel="stylesheet" type="text/css" href="../static/index/theme.css">
+    <link rel="stylesheet" type="text/css" href="../static/index/premium.css">
+
+</head>
+<body class=" theme-blue">
+
+    <!-- Demo page code -->
+
+    <script type="text/javascript">
+        $(function() {
+            var match = document.cookie.match(new RegExp('color=([^;]+)'));
+            if(match) var color = match[1];
+            if(color) {
+                $('body').removeClass(function (index, css) {
+                    return (css.match (/\btheme-\S+/g) || []).join(' ')
+                })
+                $('body').addClass('theme-' + color);
+            }
+
+            $('[data-popover="true"]').popover({html: true});
+            
+        });
+    </script>
+    <style type="text/css">
+        #line-chart {
+            height:300px;
+            width:800px;
+            margin: 0px auto;
+            margin-top: 1em;
+        }
+        .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover { 
+            color: #fff;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(function() {
+            var uls = $('.sidebar-nav > ul > *').clone();
+            uls.addClass('visible-xs');
+            $('#main-menu').append(uls.clone());
+        });
+    </script>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../static/images/icons/icons8-car-64.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../static/images/icons/icons8-car-64.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../static/images/icons/icons8-car-64.png">
+    <link rel="apple-touch-icon-precomposed" href="../static/images/icons/icons8-car-64.png">
+  
+
+  <!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
+  <!--[if IE 7 ]> <body class="ie ie7 "> <![endif]-->
+  <!--[if IE 8 ]> <body class="ie ie8 "> <![endif]-->
+  <!--[if IE 9 ]> <body class="ie ie9 "> <![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!--> 
+   
+  <!--<![endif]-->
+
+    <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Main Menu</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+         
+
+        <div class="navbar-collapse collapse" style="height: 1px;">
+          <ul id="main-menu" class="nav navbar-nav navbar-right">
+            <li class="dropdown hidden-xs">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                   Dynamometer
+                    <img src="../static/images/icons/icons8-python-48.png" alt="">
+                    <img src="../static/images/icons/icons8-github-48.png" alt="">
+                    Developer : Koosha_Yeganeh (kooshakooshadv)
+                </a>
+
+
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="sidebar-nav">
+    <ul>
+    <li><a href="#" data-target=".dashboard-menu" class="nav-header" data-toggle="collapse"><img src="../static/images/icons/icons8-gearbox-64.png" alt=""> Transmission</a></li>
+    <li><ul class="dashboard-menu nav nav-list collapse in">
+            <li><a href="/5_speed_transmission">  5 Speed Transmission</a></li>
+            <li ><a href="/6_speed_transmission"> 6 Speed Transmission</a></li>
+            <li ><a href="/7_speed_transmission"> 7 Speed Transmission</a></li>
+            <li ><a href="/8_speed_transmission"> 8 Speed Transmission</a></li>
+            <li ><a href="/9_speed_transmission"> 9 Speed Transmission</a></li>
+    </ul></li>
+
+    <li data-popover="true" rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed" data-toggle="collapse">Tractive Force </a></li>
+        <li><ul class="premium-menu nav nav-list collapse">
+            <li ><a href="/calculation_of_tractive_force_5speed"> 5 Speed Transmission</a></span>
+            <li ><a href="/calculation_of_tractive_force_6speed"> 6 Speed Transmission</a></li>
+            <li ><a href="/calculation_of_tractive_force_7speed"> 7 Speed Transmission</a></li>
+            <li ><a href="/calculation_of_tractive_force_8speed"> 8 Speed Transmission</a></li>
+            <li ><a href="/calculation_of_tractive_force_9speed"> 9 Speed Transmission</a></li>
+
+    </ul></li>
+
+    <li data-popover="true" rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed" data-toggle="collapse">Differential </a></li>
+        <li><ul class="premium-menu nav nav-list collapse">
+            <li ><a href="/Calculation_of_Output_torque">Calculation of Output torque</a></span>
+            <li ><a href="/Calculation_of_Output_rev">Calculation of Output rev</a></li>
+            <li ><a href="/Gear_ratio_Calculation_of_Differential_Number_of_teeth">Gear ratio Calculation of Differential (Number of teeth)</a></li>
+            <li ><a href="/Gear_ratio_Calculation_of_Differential_input_and_output_rev"> Gear ratio Calculation of Differential (input & output rev)</a></li>
+            <li ><a href="/Gear_ratio_Calculation_of_Differential_Gear_Diameter"> Gear ratio Calculation of Differential (Gear Diameter)</a></li>
+    </ul></li>
+    <li data-popover="true" rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed" data-toggle="collapse">Brake </a></li>
+        <li><ul class="premium-menu nav nav-list collapse">
+            <li ><a href="/brake_Time_to_Stop">Brake Distance Length</a></li>
+            <li ><a href="/time_to_stop">Time to Stop<br>(with driver reaction time)</a></li>
+            <li ><a href="/Work_of_Brake">Work of Brake</a></li>
+            <li ><a href="/power_of_brake"> Power of Brake</a></li>
+
+    </ul></li>
+
+
+
+    <li><a href="#" data-target=".dashboard-menu" class="nav-header" data-toggle="collapse">Vehicle Speed</a></li>
+    <li><ul class="dashboard-menu nav nav-list collapse in">
+            <li><a href="/vehicle_speed_with_5_speed_transmission">   Vehicle Speed with 5 Speed Transmission</a></li>
+            <li ><a href="/vehicle_speed_with_6_speed_transmission">  Vehicle Speed with 6 Speed Transmission</a></li>
+            <li ><a href="/vehicle_speed_with_7_speed_transmission">  Vehicle Speed with 7 Speed Transmission</a></li>
+            <li ><a href="/vehicle_speed_with_8_speed_transmission">  Vehicle Speed with 8 Speed Transmission</a></li>
+            <li ><a href="/vehicle_speed_with_9_speed_transmission">  Vehicle Speed with 9 Speed Transmission</a></li>
+    </ul></li>
+    
+        <li><a href="/aerodynamic" data-target=".accounts-menu" class="nav-header collapsed" data-toggle="collapse">Aerodynamic</a></li>
+        <li><a href="/center_of_gravity" data-target=".accounts-menu" class="nav-header collapsed" data-toggle="collapse">Center of Gravity </a></li>
+        <li><a href="/gradeability" data-target=".accounts-menu" class="nav-header collapsed" data-toggle="collapse">Gradeability </a></li>
+        <li><a href="/maximum_speed_of_road_curve" data-target=".accounts-menu" class="nav-header collapsed" data-toggle="collapse">Maximum Speed of Road Curve </a></li>
+        <li><a href="/clutch" data-target=".accounts-menu" class="nav-header collapsed" data-toggle="collapse">Clutch</a></li>
+        <li><a href="/rollover_speed" data-target=".accounts-menu" class="nav-header collapsed" data-toggle="collapse"> Rollover Speed</a></li>
+       
+
+    </ul></li>
+
+        <li><a href="/refreancetable" class="nav-header"><img src="../static/images/icons/icons8-construction-carpenter-ruler-64.png" alt=""> Refreance Table</a></li>
+
+               
+            </ul>
+    </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-4">
+            <h1 style="margin-top: 20%;">Dynamometer Web App</h1><br><br>
+            <h2>This application suitable for <br><br>Automotive Engineers and Car Enthusiasts </h2>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="../static/index/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $("[rel=tooltip]").tooltip();
+        $(function() {
+            $('.demo-cancel-click').click(function(){return false;});
+        });
+    </script>
+    
+ 
+</body></html>

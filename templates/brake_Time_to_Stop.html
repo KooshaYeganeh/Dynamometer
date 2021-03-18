@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power of Brake</title>
+    <link rel="stylesheet" href="../static/index/Power_of_Brake.css">
+    <link rel="stylesheet" href="../static/index/bootstrap.min.css">
+    <script src="../static/index/js/jquery-2.1.3.min.js"></script>
+    <script src="../static/index/js/bootstrap.min.js"></script>
+</head>
+<body>
+    
+  <div class="row">
+    <div class="col-md-6 col-md-offset-10">
+      <img src="../static/images/Logo-Mercedesbenz.png"  alt="..." class="img-circle">
+      <p></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="page-header text-center" id="header">
+      <h1 style="color:white"> Brake :Time to Stop </h1>
+    </div>
+  </div>
+  <br><br><br>
+
+<form action="/brake_Time_to_Stop" method="POST">
+  <div class="container">
+    <div class="row" id="inner">
+        <div class="col-md-6">
+            <label for="usr" style="color:white">Speed</label>
+            <input type="text" name="Speed" placeholder="primarily speed m/s " class="form-control" style="background-color:#8FBC8F; color:white;font-size:20px;">
+          </div>
+
+
+          <div class= "col-md-6" id="outer">
+            <label for="pwd" style="color:white">Acceleration</label>
+            <input type="text" name="acceleration" placeholder = "acceleration m/s^2" class="form-control"   style="background-color:#8FBC8F;color:white;font-size:20px;" >
+          </div> 
+
+          <div class= "col-md-6 col-md-offsset-3" id="outer">
+            <label for="pwd" style="color:white">Reaction of Driver</label>
+            <input type="text" name="Reaction Time of Driver" class="form-control"   style="background-color:#8FBC8F;color:white;font-size:20px;" >
+          </div> 
+
+
+
+        </div><br><br>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <button type="submit" class="btn btn-warning btn-lg" id="button">Calculate</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6" style="color: white;font-size:20px;">time to stop{{result}} s </div>
+        
+    </div>
+</div>
+</body>
+</html>

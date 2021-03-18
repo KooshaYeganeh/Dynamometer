@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tractive Force of 8 Speed Transmission</title>
+    <link rel="stylesheet" href="../static/index/5_speed_transmission.css">
+    <link rel="stylesheet" href="../static/index/bootstrap.min.css">
+    <script src="../static/index/js/jquery-2.1.3.min.js"></script>
+    <script src="../static/index/js/bootstrap.min.js"></script>
+</head>
+<body class="body">
+    
+    <div class="container">
+        <div class="col-md-6 col-md-offset-11">
+            <img src="../static/images/mercedes-benz-logo-png-transparent-mercedes-benz-logo2-vector-11563000960vssrfbiuqu.png"  >
+            <p></p>
+          </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-md-offset-4 ">
+                <div class="page-header">
+                    <h1>Tractive Force <small>8 Speed Transmission</small></h1>
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-sm-8">
+              <a href="#" class="thumbnail">
+                <img src="../static/images/18c0771_067_1.jpg">
+              </a>
+            </div>
+
+        </div>
+
+    
+    <br><br>
+
+<form action="/calculation_of_tractive_force_8speed" method="POST">
+    <div class="row">
+        
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="first torque" placeholder="Insert first number of Torque limit (Engine)" style="color: black;">
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="second torque" placeholder="Insert second number of Torque limit (Engine)" style="color: black;">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="one gear" placeholder="First Gear Ratio" style="color: black;">
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="two gear" placeholder="Second Gear Ratio" style="color: black;">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="three gear" placeholder="Third Gear Ratio" style="color: black;">
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="four gear" placeholder="Forth Gear Ratio" style="color: black;">
+        </div>
+    </div>
+<br>
+    <div class="row">
+        <div class="col-md-6 ">
+            <input type="text" class="form-control" name="five gear" placeholder="Fifth Gear Ratio" style="color: black;">
+        </div>
+
+        <div class="col-md-6 ">
+            <input type="text" class="form-control" name="six gear" placeholder="Sixth Gear Ratio" style="color: black;">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="seven gear" placeholder="Seventh Gear Ratio" style="color: black;">
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="eight gear" placeholder="eighth Gear Ratio" style="color: black;">
+        </div>
+    </div> <br>
+    <div class="row">
+        <div class="col-md-6 ">
+            <input type="text" class="form-control" name="wheel radius" placeholder="Insert Wheel Radius (m)"  style="color:black;">
+        </div>
+        <div class="col-md-6 ">
+            <input type="text" class="form-control" name="diff ratio" placeholder="Insert Differential ratio"  style="color:black;">
+        </div>
+    </div>
+
+<br>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-5">
+        <button type="submit" class="btn btn-warning" id="calculate" style="color: black;">Calculate</button>
+    </div>
+</div>
+
+
+
+</form>
+
+<div class="container" >
+    <div class="row" >
+        <div name="result1" style="font-size: 20px;">
+            <ul>Traction respectively for Gears in Each Torque
+                {% for number in result1 %}
+            <li>
+                {{number}} N
+            </li>           
+            {% endfor %}
+        </ul>
+        </div>
+    </div>
+    
+</div>
+
+
+</body>
+</html>

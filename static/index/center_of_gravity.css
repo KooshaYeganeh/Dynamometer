@@ -1,0 +1,17 @@
+body{
+    background-image: url(../images/sls2.jpeg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+
+}
+
+#button{
+    margin-top: 10%;
+}
+
+.row{
+    color: white;
+    font-size: 25px;
+}
+

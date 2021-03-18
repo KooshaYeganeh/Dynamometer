@@ -1,0 +1,40 @@
+body{
+  text-align: center;
+  background-image: url("../images/clutch1.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+
+#border{
+  border: 1px solid black;
+  margin: 5%;
+  margin-right: 50%;
+  box-shadow: 8px 8px 8px 8px black;
+}
+
+
+
+.row{
+  color: white;
+  font-size:18px;
+}
+
+#button:hover{
+  background-color: red;
+}
+
+
+#result1{
+  color: white;
+  font-size: 20px;
+  padding-right: 70%;
+}
+
+
+#result2{
+  color: white;
+  font-size: 20px;
+  padding-right: 0%;
+}
